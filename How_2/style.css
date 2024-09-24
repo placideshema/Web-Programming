@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 body {
     background-image: url("Kid2.jpg");
     background-size: cover;
@@ -23,3 +24,31 @@ body {
 .navbar a:hover{
     background-color:gray;
 }
+=======
+<!--Style sheet to be editable-->
+body {
+    background-image: url("Kid2.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+.navbar{
+    list-style-type: none;
+    padding: 10px;
+    text-align: right;
+}
+.navbar li{
+    display: inline;
+    margin: 0 20px;
+}
+.navbar a{
+    color: rgb(225, 236, 223);
+    text-decoration: none;
+    padding: 10px 10px;
+    transition: background 0.3s;
+}
+.navbar a:hover{
+    background-color: azure;
+}
+>>>>>>> c0f1ca3ce3b94f17b9583b6dee829f967fa4e793
