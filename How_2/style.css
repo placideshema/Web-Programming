@@ -23,7 +23,6 @@ body {
 .navbar a:hover{
     background-color:gray;
 }
-
 .intro{
     color: white;
     background-color: rgb(41, 56, 42);
@@ -32,13 +31,14 @@ body {
     font-family: 'Times New Roman', Times, serif;
 
 }
-.pragraph1{
+#home .pragraph1{
     color: white;
     font-family: 'Times New Roman', Times, serif;
     font-size: 14px;
     text-align: justify;
     margin-left: 550px;
     margin-right: 100px;
+    line-height: 1.5;
 }
 #home img{
     width: 80%;
@@ -46,4 +46,26 @@ body {
     height: auto;
     float: left;
     margin-left: 30px;
+}
+#new_home img{
+    width: 80%;
+    max-width: 500px;
+    height: auto;
+    float: left;
+    margin-left: 30px;
+}
+.home_page{
+    background-image: url("kid4.jpg") ;
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.home_page .pragraph1{
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 14px;
+    text-align: justify;
+    margin-left: 550px;
+    margin-right: 100px;
+    line-height: 1.5;
 }
