@@ -23,12 +23,23 @@ body {
 .navbar a:hover{
     background-color:gray;
 }
-#home{
+.intro{
     color: white;
-    font-family:'Courier New', Courier, monospace;
+    background-color: rgb(41, 56, 42);
+    display: inline;
+    margin-left: 20px;
+    font-family: 'Times New Roman', Times, serif;
+
+}
+.details{
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 14px;
 }
 #home img{
     width: 80%;
     max-width: 500px;
     height: auto;
+    float: left;
+    margin-left: 30px;
 }
