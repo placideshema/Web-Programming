@@ -17,7 +17,7 @@ body {
     margin: 0 20px;
 }
 .navbar a{
-    color: rgb(225, 236, 223);
+    color: rgb(232, 239, 232);
     text-decoration: none;
     padding: 10px 10px;
     transition: background 0.3s;
@@ -76,11 +76,21 @@ body {
     flex-wrap: wrap;
 }
 footer{
-    background-color: black;
+    background-color: rgba(8, 8, 8,0.7);
     color: white;
     text-align: center;
     position: relative;
     padding: 50px 0;
     bottom: 0;
     width: 100%;
+}
+footer .footer_navbar a{
+    color: rgb(36, 3, 249);
+    text-decoration:wavy;
+    padding: 10px 10px;
+    transition: background 0.3s;
+    text-align: center;
+}
+.footer_navbar a:hover{
+    background-color:gray;
 }
