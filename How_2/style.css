@@ -7,14 +7,24 @@ body {
     flex-direction: column;
     
 }
+html,body{
+    padding: 0;
+    margin: 0;
+}
 .navbar{
     list-style-type: none;
     padding: 10px;
     text-align: right;
+    position: sticky;
+    background-color: black;
+    margin: 0;
+    top:0;
+    z-index: 1000;
 }
 .navbar li{
-    display: inline;
-    margin: 0 20px;
+    display: inline-block;
+    margin: 10px 20px;
+    text-shadow: 1px 1px 2px black, 0 0 25px gray, 0 0 5px rgb(17, 230, 46);
 }
 .navbar a{
     color: rgb(232, 239, 232);
@@ -36,7 +46,7 @@ body {
 #home .pragraph1{
     color: white;
     font-family: 'Times New Roman', Times, serif;
-    font-size: 14px;
+    font-size: 15px;
     text-align: justify;
     margin-left: 550px;
     margin-right: 100px;
@@ -50,6 +60,12 @@ body {
     height: auto;
     float: left;
     margin-left: 30px;
+    border-style: dashed;
+    border-color: azure;
+}
+.floating{
+    clear: both;
+    height: 0;
 }
 #new_home img{
     width: 80%;
@@ -57,6 +73,23 @@ body {
     height: auto;
     float: left;
     margin-left: 30px;
+    border-style: dashed;
+    border-color: azure;
+}
+.front_fun_pic img {
+    width: 80%px;
+    max-width: 500px;
+    height: 300px;
+    float: left;
+    margin-left: 80px;
+    margin-top: 20px;
+}
+.front_fun_pic img:first-child{
+    border: dashed white;
+}
+.front_fun_pic img:last-child{
+    border: dashed white;
+    margin-left: 180px;
 }
 .home_page{
     background-image: url("kid4.jpg") ;
@@ -67,10 +100,21 @@ body {
 .home_page .pragraph1{
     color: white;
     font-family: 'Times New Roman', Times, serif;
-    font-size: 14px;
+    font-size: 15px;
     text-align: justify;
     margin-left: 550px;
     margin-right: 100px;
+    line-height: 1.5;
+    display: flex;
+    flex-wrap: wrap;
+}
+.img_descrpt{
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 15px;
+    text-align: justify;
+    margin-left: 100px;
+    margin-right: 150px;
     line-height: 1.5;
     display: flex;
     flex-wrap: wrap;
@@ -80,12 +124,10 @@ footer{
     color: white;
     text-align: center;
     position: relative;
-    padding: 50px 0;
-    bottom: 0;
-    width: 100%;
+    padding: 50px;
 }
 footer .footer_navbar a{
-    color: rgb(36, 3, 249);
+    color: rgb(12, 118, 5);
     text-decoration:wavy;
     padding: 10px 10px;
     transition: background 0.3s;
