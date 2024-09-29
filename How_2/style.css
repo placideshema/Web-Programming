@@ -181,3 +181,38 @@ footer .footer_navbar a{
     margin-top: 10px;
     font-size: 15px;
 }
+
+/* style for connecting page */
+.connect_page{
+    background-image: url("sign-up.webp");
+}
+
+/* form for connecting */
+input[type=text], select {
+    width: 100%;
+    padding: 10px;
+    margin: 8px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+.forms {
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 15px;
+    margin-left: 450px;
+    margin-top: 90px;
+    margin-right: 600px;
+}
+input[type=submit] {
+    background-color: #6dc172;
+    width: 85%;
+    padding: 5px;
+    margin-left: 25px;
+    margin-bottom: 30px;
+    
+  }
+input[type=submit]:hover {
+    background-color: #45a049;
+  }
