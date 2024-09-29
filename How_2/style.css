@@ -201,15 +201,17 @@ input[type=text], select {
     color: white;
     font-family: 'Times New Roman', Times, serif;
     font-size: 15px;
-    margin-left: 450px;
+    margin-left: 500px;
     margin-top: 90px;
     margin-right: 600px;
+    display: flex;
+    flex-wrap: wrap;
 }
 input[type=submit] {
     background-color: #6dc172;
     width: 85%;
     padding: 5px;
-    margin-left: 25px;
+    margin-left: 20px;
     margin-bottom: 30px;
     
   }
