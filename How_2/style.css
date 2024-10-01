@@ -125,6 +125,8 @@ html,body{
     line-height: 1.5;
     display: flex;
     flex-wrap: wrap;
+    background-color: rgba(8, 8, 8,0.5);
+
 }
 footer{
     background-color: rgba(8, 8, 8,0.7);
@@ -135,14 +137,16 @@ footer{
 }
 footer .footer_navbar a{
     color: rgb(12, 118, 5);
+    display: inline-block;
     text-decoration:wavy;
-    padding: 10px 10px;
-    transition: background 0.3s; 
+    padding: 10px;
+    transition: background 0.3s;
     text-align: center;
     padding-bottom: 0;
 }
 .footer_navbar a:hover{
     background-color:gray;
+
 }
 
 /* style for the event-page */
@@ -197,6 +201,7 @@ input[type=text], select {
     border-radius: 4px;
     box-sizing: border-box;
   }
+
 .forms {
     color: white;
     font-family: 'Times New Roman', Times, serif;
@@ -207,14 +212,46 @@ input[type=text], select {
     display: flex;
     flex-wrap: wrap;
 }
+
 input[type=submit] {
     background-color: #6dc172;
     width: 85%;
     padding: 5px;
     margin-left: 20px;
     margin-bottom: 30px;
-    
   }
+
 input[type=submit]:hover {
     background-color: #45a049;
   }
+
+/* style for the privacy policy page */
+.policy_par {
+    color: white;
+    margin-left: 100px;
+    margin-right: 100px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: rgba(8, 8, 8,0.5);
+}
+.policy_title {
+    color: white;
+    margin-top: 90px;
+    margin-left: 500px;
+    margin-right: 100px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.terms_par{
+    color: white;
+    margin-left: 100px;
+    margin-right: 100px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: rgba(8, 8, 8,0.5);
+}
+.terms_title {
+    color: white;
+    margin-top: 90px;
+    margin-left: 500px;
+    margin-right: 100px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
