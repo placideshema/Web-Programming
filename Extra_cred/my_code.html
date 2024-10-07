@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Problems solved</title>
+        <style>
+            body{
+                background-color: rgb(219, 240, 240);
+                font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                font-size: 15px;
+                line-height: 1.5;
+                text-align:center;
+            }
+        </style>
+    </head>
+    <body>
+        <h3> Welcome to front end page</h3>
+        <h2>The result of the solved problem are below: </h2>
+        <script>
+            document.write("Problem 1:" + "<br/>");
+            function problem1(){
+                // Display numbers from 40 counting down to 10 by two’s (40,38,36,34,...)
+                let i = 40;
+                document.write("The numbers from 40 to 10 are: ");
+                while( i >=10){
+                    if (i==10){
+                        document.write(i);
+                    }
+                    else{
+                        document.write(i + ", ");
+                    } 
+                    i = i-2;
+                }
+            }
+
+            //problem 2
+            function problem2() {
+                document.write("<br/>" + "Problem 2: " + "<br/>");
+                let sum = 0;
+                let result="";
+                while (sum <= 20) {
+                    let num = parseFloat(prompt("Enter a number (sum is now: " + sum + "):"));
+                    sum += num;
+                }
+                result += "Final sum: " + sum;
+                return result;
+            }
+
+        // problem 3
+        function problem3() {
+            document.write("<br/>" + "Problem 3:" + "<br/>");
+            let sum = 0;
+            let numbers = [];
+            let result ="";
+            while (sum <= 20) {
+                let num = parseFloat(prompt("Enter a number (sum is now: " + sum + "):"));
+                sum += num;
+                numbers.push(num);
+            }
+            result += "Final sum: " + sum + "<br/>";
+            result += "Array of numbers: [" + numbers.join(", ") + "]";
+            return result;
+        }
+
+        //problem 4
+        function problem4() {
+            document.write("<br/>" + "Problem 4: Artist and songs" + "<br/>");
+            let songs = {
+                "Kumugongo": "Be Trey",
+                "Samoya": "Bruce Melody",
+                "Diamonds": "Rihanna",
+                "Ndagukunda": "King James",
+                "Ibisumizi": "Riderman"
+            };
+            let result = "";
+            for (let song in songs) {
+                result += song + " - " + songs[song] + "<br/>";
+            }
+            return result;
+        }
+        
+        //problem 5
+        function problem5() {
+            document.write("<br/>" + "Problem 5: Song and bands" + "<br/>");
+            let songs = {
+                "Kumugongo": "Be Trey",
+                "Samoya": "Bruce Melody",
+                "Diamonds": "Rihanna",
+                "Ndagukunda": "King James",
+                "Ibisumizi": "Riderman"
+            };
+            let band_name = prompt("Enter the name of a band:");
+            let result = " ";
+            let foundSongs = false;
+            for (let song in songs) {
+                if (songs[song].toLowerCase() === band_name.toLowerCase()) {
+                    result += song + "\n";
+                    foundSongs = true;
+                }
+            }
+            if (!foundSongs) {
+                result += "No songs found for this list of band.";
+            }
+            return result;
+        }
+
+        //call the functions for the all problems 
+        problem1();
+        document.write(problem2() + "<br/>");
+        document.write(problem3() + "<br/>");
+        document.write(problem4() + "<br/>");
+        document.write(problem5() + "<br/>");
+        </script>
+    </body>
+</html>
+
