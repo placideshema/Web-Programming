@@ -23,27 +23,27 @@
         <h3> Welcome to Joe's Hotdog Ordering Page</h3>
         <h2>The record of your order: </h2>
         <script>
-            const prices={
-                hotdogs_price : 4.80,
-                fries_price : 3.95,
-                drinks_price : 1.99
+            const menu = {
+                hotdogs: 4.80,
+                fries: 3.95,
+                drinks: 1.99
             };
-            
-            let items ={
+
+            let items = {
                 numDogs: 0,
                 numFries: 0,
-                numSoda:0
+                numSoda: 0
             };
-            
-            // formatting two decimals 
+
+            // formatting two decimals
             function showMoney(price) {
                 let cents = price * 100;
 
                 cents = cents + 0.5;
                 cents = cents - (cents % 1);
 
-                let dollars = Math.floor(cents / 100); // separate dollars 
-                let rounded_cents = cents % 100; //get cents
+                let dollars = Math.floor(cents / 100); // separate dollars
+                let rounded_cents = cents % 100; // get cents
 
                 // ensure two decimal places
                 if (rounded_cents < 10) {
@@ -53,40 +53,39 @@
                 return dollars + "." + rounded_cents;
             }
 
-            // Prompting user 
-            for (let i=0; i<3; i++){
+            // Arrays for mapping
+            let item_list = ['hotdogs', 'fries', 'drinks'];
+            let num_items = ['numDogs', 'numFries', 'numSoda'];
 
+            // Loop to prompt user input number of items 
+            for (let i = 0; i < item_list.length; i++) {
+                let num = parseInt(prompt("How many " + item_list[i] + " do you want?"));
+                items[num_items[i]] = num; 
             }
-            let numDogs = parseInt(prompt("How many hotdogs do you want?"));
-            let numFries = parseInt(prompt("How many fries do you want?"));
-            let numSoda = parseInt(prompt("How many sodas do you want?"));
 
-            // Calculating subtotal
-            let subtotal = (numDogs * hotdogs_price) + (numFries * fries_price) + (numSoda * drinks_price);
-            
-            //display the informations entered
-            document.write("Price of the hotDogs: " + showMoney(hotdogs_price) + "<br>");
-            document.write("Price of the Fries: " + showMoney(fries_price) + "<br>");
-            document.write("Price of the Soda: " + showMoney(drinks_price) + "<br>");
-            document.write("Number of ordered Hotdogs: " + numDogs + "<br>");
-            document.write("Number of ordered Fries: " + numFries + "<br>");
-            document.write("Number of ordered Soda: " + numSoda + "<br>");
-            document.write("Subtotal without discount: " + showMoney(subtotal) + "<br>");
+            // Calculating subtotal using loop
+            let subtotal = 0;
+            for (let i = 0; i < item_list.length; i++) {
+                subtotal += menu[item_list[i]] * items[num_items[i]];
+            }
 
+            // Display the information entered
+            for (let i = 0; i < item_list.length; i++) {
+                document.write("Price of " + item_list[i] + ": $" + showMoney(menu[item_list[i]]) + "<br>");
+                document.write("Number of " + item_list[i] + ": " + items[num_items[i]] + "<br>");
+            }
 
-            // Apply discount of 10%
+            document.write("Subtotal without discount: $" + showMoney(subtotal) + "<br>");
+
+            //discount at 10%
             if (subtotal >= 25) {
-                subtotal = subtotal * 0.9; // Apply 10% discount
+                subtotal = subtotal * 0.9; 
             }
-            //display the subtotal with discount if applied
-            document.write("Subtotal with discount: " + showMoney(subtotal) + "<br>");
-
-
+            document.write("Subtotal with discount: $" + showMoney(subtotal) + "<br>");
 
             // Calculate total with tax
-            let total = subtotal + (subtotal* 0.0625) // include the discount
-            document.write("Total with taxes: $" + showMoney(total) + "<br/>");
+            let total = subtotal + (subtotal * 0.0625); // Include the discount
+            document.write("Total with taxes: $" + showMoney(total) + "<br>");
         </script>
     </body>
 </html>
-
