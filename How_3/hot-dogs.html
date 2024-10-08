@@ -65,7 +65,7 @@
 
             // Apply discount of 10%
             if (subtotal >= 25) {
-                subtotal = subtotal * 0.9; // Apply 10% discount
+                subtotal = subtotal * 0.9; 
             }
             //display the subtotal with discount if applied
             document.write("Subtotal with discount: " + showMoney(subtotal) + "<br>");
@@ -73,7 +73,7 @@
 
 
             // Calculate total with tax
-            let total = subtotal + (subtotal* 0.0625) // include the discount
+            let total = subtotal + (subtotal* 0.0625)
             document.write("Total with taxes: $" + showMoney(total) + "<br/>");
         </script>
     </body>
