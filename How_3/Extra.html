@@ -6,22 +6,26 @@
         <title>Joe's Hotdog Ordering Page</title>
         <style>
             body{
-                background-color: rgb(219, 240, 240);
                 font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
                 font-size: 15px;
                 line-height: 1.5;
                 text-align:center;
+                background-image: url(healthy.jpg);
             }
             body h3{
                 color: blue;
                 background-color:gray;
                 display: inline-block;
             }
+            .ordering{
+                color: white;
+            }
         </style>
     </head>
     <body>
         <h3> Welcome to Joe's Hotdog Ordering Page</h3>
         <h2>The record of your order: </h2>
+        <div class="Ordering">
         <script>
             const menu = {
                 hotdogs: 4.80,
@@ -87,5 +91,6 @@
             let total = subtotal + (subtotal * 0.0625); 
             document.write("Total with taxes: $" + showMoney(total) + "<br>");
         </script>
+        </div>
     </body>
 </html>
