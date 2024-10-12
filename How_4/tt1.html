@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe board_game</title>
+    <style>
+        html,body{
+            padding: 0;
+            margin: 0;
+            scroll-behavior: smooth;
+            scroll-padding-top: 90px;
+        }
+        .navbar{
+            list-style-type: none;
+            padding: 10px;
+            text-align: right;
+            position: fixed;
+            background-color: black;
+            margin: 0;
+            top:0;
+            right: 0;
+            z-index: 1000;
+            width: 100%;
+        }
+        .navbar li{
+            display: inline-block;
+            margin: 10px 20px;
+            }
+        .navbar a{
+            color: rgb(232, 239, 232);
+            text-decoration: none;
+            background-color: rgb(231, 6, 6);
+            padding: 10px 10px;
+            transition: background 0.3s;
+            font-family: 'Times New Roman', Times, serif;
+            border-radius: 5px;
+        }
+        .navbar a:hover{
+            background-color:rgb(221, 89, 89); 
+            text-shadow: 50px 50px 50px rgb(110, 101, 101), 0 0 25px gray, 0 0 5px rgb(200, 210, 201);
+
+        }
+        footer{
+            background-color: rgba(8, 8, 8,0.7);
+            color: white;
+            text-align: center;
+            position: relative;
+            padding: 20px;
+        }
+        footer .footer_navbar a{
+            color: rgb(20, 169, 119);
+            text-decoration:wavy;
+            padding: 10px;
+            transition: background 0.3s;
+            text-align: center;
+            padding-bottom: 10px;
+        }
+        .footer_navbar a:hover{
+            background-color:rgb(130, 26, 26);
+            border-radius: 5px;
+
+        }
+
+        body{
+            margin-top: 90px;
+            justify-content: center;
+            display: relative;
+            background-image: url(wallpaper.jpg);
+        }
+        .home_page{
+            color: rgb(250, 250, 251);
+            margin-top: 20px;
+            text-align: center;
+
+        }
+        
+        .board_game {
+            display: grid; 
+            grid-template-columns: repeat(3,100px);
+            grid-gap: 5px;
+        }
+        .square {
+            width: 100px;
+            height: 100px;
+            background-color: #f0f0f0;
+            border: 1px solid #000;
+            display: relative;
+            justify-content: center;
+            align-items: center;
+            margin-left: 500px;
+            font-size: 50px;
+            color: black;
+            /* cursor: pointer; */
+        }
+        .square:hover {
+            background-color: #acbcd5;
+        }
+        .rules{
+            background-color: rgba(19, 18, 18, 0.7);
+            display: flex;
+        }
+        #policies{
+            background-color: rgba(19, 18, 18, 0.7);
+            display: relative;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul class="navbar">
+            <li><a href="#home_page"> Home </a></li>
+            <li><a href="#rules"> Learn </a></li>
+            <li><a href="#policies"> Policies </a></li>
+        </ul>
+    </nav>
+    <section id="home_page">
+        <div class="home_page">
+            <h3>Wooo! You are on the right spot!!</h3>
+            <p>You get this! Pat your shoulder, play with your friend, and win!</p>
+        </di>
+    </sections>
+    <!-- creating or initializing a board for with two Xs and one Os -->
+    <div class="board_game">
+        <div class="square">X</div>
+        <div class="square"></div>
+        <div class="square">X</div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square">0</div>
+        <div class="square"></div>
+        <div class="square"></div>
+    </div>
+    <!-- instructions and rules -->
+     <section id="rules">
+    <h4>Instructions and Rules</h4>
+    <div class="rules">
+        <p>* Player Roles: Two players compete, one symbolizing 'X' and the other representing 'O'.</p>
+        <p>* The Core Objective: The primary aim is lining up three identical markers (either Xs or Os) in a sequence - whether it's vertical, horizontal, or diagonal.</p>
+        <p>* Game Progression: Players place their symbols on any vacant spot. Conventionally, 'X' leads the game.</p>
+        <p>* Order of play: Players take turns in a set sequence, ensuring no one skips their move.</p>
+        <p>* The Victory Condition: A player triumphs by successfully placing three of their markers in an unbroken line.</p>
+        <p>* Draw Scenario: If all board cells are occupied without either player achieving the three-marker alignment, it's deemed a draw or a 'cat’s game'.</p>
+     </div>
+     </section>
+     <section id="policies">
+        <h2>Game Policies</h2>
+        <h3>1. How to Play Nice</h3>
+        <p>Be friendly to other players.</p>
+        <p>Don't use bad language or bully others.</p>
+        <p>Play fair - no cheating!</p>
+
+        <h3>2. Your Privacy</h3>
+        <p>We only collect your username (if you choose one) and game scores.</p>
+        <p>We use this info to make the game better and fix problems.</p>
+        <p>We keep your info safe and don't share it.</p>
+
+        <h3>3. Cookies</h3>
+        <p>We use cookies to remember your game and settings. You can turn them off, but some things might not work as well.</p>
+
+        <h3>4. Website Stuff</h3>
+        <p>Everything on this website belongs to us. We try to make it easy for everyone to use.</p>
+
+        <h3>Questions?</h3>
+        <p>Email us at: play@tictactoe.com</p>
+
+        <p>Last updated: 10th October, 2024</p>
+    </section>
+    <!--this is the web footer-->
+    <footer>
+        <p>&copy; 2024 website. All rights reserved</p>
+        <nav>
+            <div class="footer_navbar">
+                <a href="#policies">Terms of Services</a>
+                <a href="tt1.html">Contact Us</a>
+            </div>
+        </nav>
+    </footer>
+</body>
+</html>
