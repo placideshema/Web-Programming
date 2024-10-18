@@ -74,11 +74,12 @@
             text-align: center;
 
         }
-        
         .board_game {
             display: grid; 
             grid-template-columns: repeat(3,100px);
             grid-gap: 5px;
+            justify-content: center;
+            
         }
         .square {
             width: 100px;
@@ -88,7 +89,7 @@
             display: relative;
             justify-content: center;
             align-items: center;
-            margin-left: 500px;
+            align-content: center;
             font-size: 50px;
             color: black;
             /* cursor: pointer; */
@@ -97,12 +98,32 @@
             background-color: #acbcd5;
         }
         .rules{
-            background-color: rgba(19, 18, 18, 0.7);
-            display: flex;
+            display: relative;
         }
         #policies{
-            background-color: rgba(19, 18, 18, 0.7);
+            background-color: rgba(39, 32, 32, 0.4);
             display: relative;
+        }
+        #paragraph{
+            background-color: rgba(19, 18, 18, 0.7);
+        }
+        /* Display for the win condition or game status */
+        .win-display {
+            border: 2px dashed white;
+            padding: 10px;
+            width: 200px;
+            margin: 20px auto;
+            font-size: 20px;
+            background-color: rgb(98, 167, 125,0.4);
+        }
+        .turn-display {
+            border: 2px dashed white;
+            padding: 10px;
+            width: 200px;
+            margin: 20px auto;
+            font-size: 20px;
+            text-align: center;
+            background-color: rgb(98, 167, 125,0.4);
         }
     </style>
 </head>
@@ -116,57 +137,68 @@
     </nav>
     <section id="home_page">
         <div class="home_page">
+            <marquee width="60%" direction="left" height=auto>
+                <h1>Tic Tac Toe Game</h1>
+            </marquee>            
             <h3>Wooo! You are on the right spot!!</h3>
-            <p>You get this! Pat your shoulder, play with your friend, and win!</p>
         </di>
     </sections>
-    <!-- creating or initializing a board for with two Xs and one Os -->
-    <div class="board_game">
-        <div class="square">X</div>
-        <div class="square"></div>
-        <div class="square">X</div>
-        <div class="square"></div>
-        <div class="square"></div>
-        <div class="square"></div>
-        <div class="square">0</div>
-        <div class="square"></div>
-        <div class="square"></div>
+    <!-- Display whose turn it is -->
+    <div id="turn" class="turn-display">Player X's Turn</div>
+
+    <div id="board_game" class="board_game">
+        <script>
+        const NUM_SQUARES = 9;
+        for (i=0; i<NUM_SQUARES; i++){
+            id = "sq"+i;
+            document.write( "<div class='square' id='" + id + "'></div>" );
+        }
+        // add O and X for view
+        document.getElementById('sq3').innerText = 'O';
+        document.getElementById('sq2').innerText = 'X';
+    
+        </script>
     </div>
+    <!-- Display for the win condition or game status -->
+    <div id="win_display" class="win-display"></div>
+
     <!-- instructions and rules -->
-     <section id="rules">
-    <h4>Instructions and Rules</h4>
-    <div class="rules">
-        <p>* Player Roles: Two players compete, one symbolizing 'X' and the other representing 'O'.</p>
-        <p>* The Core Objective: The primary aim is lining up three identical markers (either Xs or Os) in a sequence - whether it's vertical, horizontal, or diagonal.</p>
-        <p>* Game Progression: Players place their symbols on any vacant spot. Conventionally, 'X' leads the game.</p>
-        <p>* Order of play: Players take turns in a set sequence, ensuring no one skips their move.</p>
-        <p>* The Victory Condition: A player triumphs by successfully placing three of their markers in an unbroken line.</p>
-        <p>* Draw Scenario: If all board cells are occupied without either player achieving the three-marker alignment, it's deemed a draw or a 'cat’s game'.</p>
-     </div>
+    <section id = "paragraph">
+        <section id="rules">
+        <h4>Instructions and Rules</h4>
+            <div class="rules">
+                <p>* Player Roles: Two players compete, one symbolizing 'X' and the other representing 'O'.</p>
+                <p>* The Core Objective: The primary aim is lining up three identical markers (either Xs or Os) in a sequence - whether it's vertical, horizontal, or diagonal.</p>
+                <p>* Game Progression: Players place their symbols on any vacant spot. Conventionally, 'X' leads the game.</p>
+                <p>* Order of play: Players take turns in a set sequence, ensuring no one skips their move.</p>
+                <p>* The Victory Condition: A player triumphs by successfully placing three of their markers in an unbroken line.</p>
+                <p>* Draw Scenario: If all board cells are occupied without either player achieving the three-marker alignment, it's deemed a draw or a 'cat’s game'.</p>
+            </div>
+        </section>
+        <section id="policies">
+            <h2>Game Policies</h2>
+            <h3>1. How to Play Nice</h3>
+            <p>Be friendly to other players.</p>
+            <p>Don't use bad language or bully others.</p>
+            <p>Play fair - no cheating!</p>
+
+            <h3>2. Your Privacy</h3>
+            <p>We only collect your username (if you choose one) and game scores.</p>
+            <p>We use this info to make the game better and fix problems.</p>
+            <p>We keep your info safe and don't share it.</p>
+
+            <h3>3. Cookies</h3>
+            <p>We use cookies to remember your game and settings. You can turn them off, but some things might not work as well.</p>
+
+            <h3>4. Website Stuff</h3>
+            <p>Everything on this website belongs to us. We try to make it easy for everyone to use.</p>
+
+            <h3>Questions?</h3>
+            <p>Email us at: play@tictactoe.com</p>
+
+            <p>Last updated: 10th October, 2024</p>
+        </section>
      </section>
-     <section id="policies">
-        <h2>Game Policies</h2>
-        <h3>1. How to Play Nice</h3>
-        <p>Be friendly to other players.</p>
-        <p>Don't use bad language or bully others.</p>
-        <p>Play fair - no cheating!</p>
-
-        <h3>2. Your Privacy</h3>
-        <p>We only collect your username (if you choose one) and game scores.</p>
-        <p>We use this info to make the game better and fix problems.</p>
-        <p>We keep your info safe and don't share it.</p>
-
-        <h3>3. Cookies</h3>
-        <p>We use cookies to remember your game and settings. You can turn them off, but some things might not work as well.</p>
-
-        <h3>4. Website Stuff</h3>
-        <p>Everything on this website belongs to us. We try to make it easy for everyone to use.</p>
-
-        <h3>Questions?</h3>
-        <p>Email us at: play@tictactoe.com</p>
-
-        <p>Last updated: 10th October, 2024</p>
-    </section>
     <!--this is the web footer-->
     <footer>
         <p>&copy; 2024 website. All rights reserved</p>
